@@ -1,6 +1,6 @@
 # FF11 Private Server Launcher in JS/React
 
-This is a custom built FF11 private server launcher built in JS/React, a fair amount of the logic was built by ChatGPT to convert XILoader and LandBoatSea logic to work with JS buffers. All the account logic works fine. Works with bother Ashita and Windower.
+This is a custom built FF11 private server launcher built in JS/React, a fair amount of the logic was built by ChatGPT to convert XILoader and LandBoatSea logic to work with JS buffers. All the account logic works fine. Works with both Ashita and Windower (Since you'd add them like you would xiloader.
  
 ![Launcher Preview](preview.png)
 
