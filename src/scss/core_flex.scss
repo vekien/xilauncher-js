@@ -1,0 +1,59 @@
+.flex {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: space-between;
+
+    &.flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    &.flex-justify-center {
+        justify-content: center;
+    }
+
+    &.flex-justify-right {
+        justify-content: flex-end;
+    }
+
+    &.flex-justify-space {
+        justify-content: space-between;
+    }
+
+    @for $i from 1 through 20 {
+        .flex-#{$i * 5} {
+            position: relative;
+            flex: 0 1 $i * 5%;
+        }
+    }
+
+    // custom, 3 slot even.
+    .flex-33 {
+        position: relative;
+        flex: 0 1 33%;
+    }
+
+    .flex-auto {
+        flex: 0 1 auto;
+    }
+
+    @for $i from 1 through 10 {
+        &.flex-pad-#{$i * 5}, .flex-pad-#{$i * 5} {
+            padding: $i * 5px;
+        }
+    }
+
+    @for $i from 1 through 10 {
+        &.flex-pad-left-#{$i * 5}, .flex-pad-left-#{$i * 5} {
+            padding-left: $i * 5px;
+        }
+    }
+
+    @for $i from 1 through 10 {
+        &.flex-pad-right-#{$i * 5}, .flex-pad-right-#{$i * 5} {
+            padding-right: $i * 5px;
+        }
+    }
+}

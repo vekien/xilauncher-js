@@ -1,0 +1,20 @@
+.discord-link {
+    position: absolute;
+    right: 20px; top: 80px;
+    display: inline-block;
+    width: 185px;
+    height: 50px;
+    border-radius: 4px;
+    background-image: url("icons/discord-logo-white.svg");
+    background-repeat: no-repeat;
+    background-color: #5865f2;
+    background-size: 85%;
+    background-position: center;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.5);
+    z-index: 50;
+    transition: 200ms;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

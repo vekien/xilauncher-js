@@ -1,0 +1,148 @@
+form, .form {
+    .form-row {
+        margin-bottom: 20px;
+    }
+
+    input, textarea, select, button {
+        transition: 150ms;
+    }
+
+    label {
+        display: block;
+        color: $dark_shade_1;
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 10px;
+
+        em {
+            opacity: 0.6;
+            font-style: italic;
+            font-size: 13px;
+            font-weight: 500;
+            display: inline-block;
+            float: right;
+        }
+    }
+
+    small {
+        font-size: 13px;
+        font-style: italic;
+        color: $orange_1;
+    }
+
+    input:not([type="checkbox"]), textarea, select {
+        display: inline-block;
+        width: 100%;
+
+        padding: 12px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 24px;
+
+        background-color: #eee;
+        border: none;
+        box-shadow: inset 0 0 40px rgba(0,0,0,0.1);
+        transition: 200ms;
+
+        border-radius: 5px;
+
+        &:hover {
+            background-color: #ddd;
+        }
+
+        &.big {
+            font-size: 20px;
+            padding: 14px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &.block {
+            display: block;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+        }
+
+        &.auto {
+            width: auto;
+        }
+
+        &.w100 {
+            width: 100%;
+        }
+    }
+
+    select {
+        display: inline-block;
+        width: auto;
+    }
+
+    .form-checkbox {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        padding: 5px 0;
+        position: relative;
+
+        label {
+            position: relative;
+            font-size: 16px;
+            font-weight: 400;
+            display: inline-block;
+            padding: 4px 0 0 45px;
+            outline: none;
+            cursor: pointer;
+
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                display: inline-block;
+            }
+
+            &::before {
+                height: 26px;
+                width: 26px;
+                border: solid 2px $dark_shade_1;
+                background-color: $dark_shade_1;
+                left: 0;
+                top: -1px;
+                border-radius: 3px;
+            }
+
+            &:hover {
+                color: $dark_shade_1;
+            }
+
+            &::after {
+                height: 6px;
+                width: 13px;
+                left: 8px;
+                top: 8px;
+                border-left: 2px solid $orange_1;
+                border-bottom: 2px solid $orange_1;
+                transform: rotate(-50deg);
+            }
+        }
+
+        input[type="checkbox"] {
+            opacity: 0;
+            position: absolute;
+
+            &:checked + label::after {
+                content: "";
+            }
+
+            & + label::after {
+                content: none;
+            }
+        }
+    }
+}

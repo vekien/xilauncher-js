@@ -1,0 +1,43 @@
+{
+  "name": "XI Loader",
+  "description": "XI Loader for private servers, converted to Electron",
+  "author": "Josh Freeman <josh@viion.co.uk>",
+  "version": "0.1.1",
+  "license": "MIT",
+  "main": "src/js/electron/electron.js",
+  "build": {
+    "appId": "game.ffxi.loader",
+    "win": {
+      "icon": "build/logo.ico"
+    },
+    "mac": {
+      "category": "software"
+    }
+  },
+  "scripts": {
+    "encore-dev": "encore dev --watch",
+    "encore-prod": "encore prod",
+    "electron-dev": "electron . --dev",
+    "electron-prod": "encore prod",
+    "prepack": "yarn run build",
+    "pack": "electron-builder --dir",
+    "predist": "yarn run build",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "@symfony/webpack-encore": "^4.2.0",
+    "com": "^0.0.5",
+    "electron": "^22.0.0",
+    "electron-reload": "^2.0.0-alpha.1",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.5.0",
+    "regedit": "^5.1.1",
+    "sass": "^1.57.0",
+    "sass-loader": "^13.0.0",
+    "sha1-file": "^3.0.0",
+    "uuid": "^9.0.0"
+  }
+}

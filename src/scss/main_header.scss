@@ -1,0 +1,66 @@
+//
+// Main UI header, including the drag bar, title and the min/max/close buttons
+//
+header {
+    -webkit-app-region: drag;
+    height: 52px;
+    backdrop-filter: blur(5px);
+    border-bottom: solid 1px rgba(0,0,0,0.5);
+    //background-color: #fff;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+
+    .header-title {
+        position: absolute;
+        top: 22px; left: 22px;
+
+        color: lighten($colour7, 40%);
+        font-size: 14px;
+        font-weight: 400;
+        font-style: italic;
+        letter-spacing: 1px;
+        pointer-events: none;
+    }
+
+    .header-buttons {
+        position: absolute;
+        top: 18px; right: 20px;
+
+        button {
+            -webkit-app-region: no-drag;
+            background-color: transparent;
+            border: none;
+            transition: 150ms;
+            border-radius: 100px;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            vertical-align: top;
+            cursor: pointer;
+
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+            &:hover {
+                transform: scale(1.4);
+            }
+
+            &.header-button-min {
+                background-image: url('icons/minus-solid.svg');
+                margin-right: 15px;
+            }
+
+            // &.header-button-max {
+            //     background-color: $colour1;
+            // }
+
+            &.header-button-close {
+                background-image: url('icons/xmark-solid.svg');
+            }
+        }
+    }
+}
