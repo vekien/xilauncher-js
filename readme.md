@@ -1,6 +1,6 @@
 # FF11 Private Server Launcher in JS/React
 
-This is a custom built FF11 private server launcher built in JS/React, a fair amount of the logic was built by ChatGPT to convert XILoader and LandBoatSea logic to work with JS buffers. All the account logic works fine. Works with both Ashita and Windower (Since you'd add them like you would xiloader.
+This is a custom built FF11 private server launcher built in JS/React, a fair amount of the logic was built by ChatGPT to convert XILoader and LandBoatSea logic to work with JS buffers. All the account logic works fine. Works with both Ashita and Windower (Since you'd add them like you would xiloader.)
  
 ![Launcher Preview](preview.png)
 
@@ -10,7 +10,7 @@ I have't got the booting of the game working just yet, was considering just runn
 
 Would love to add:
 
-- Ability to modify regedit (a paint in Electron because of Chrome Security layer)
+- Ability to modify regedit (a pain in Electron because of Chrome Security layer)
 - Ability to download the game and patch (Dead easy, just have it on a GDrive or DropBox then add a downloader)
 - Ability to add mods (Again super super simple)
 
